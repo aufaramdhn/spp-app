@@ -52,7 +52,7 @@ if (isset($_POST['simpan'])) {
                     <form method="POST">
                         <div class="mb-3">
                             <label for="siswa" class="form-label">Siswa</label>
-                            <select class="form-select" name="siswa" id="siswa" required>
+                            <select id="id" class="form-select" name="siswa" id="siswa" required>
                                 <option value="" hidden>Pilih Siswa</option>
                                 <?php foreach ($siswa as $siswa) : ?>
                                     <option value="<?= $siswa['id_siswa'] ?>"><?= $siswa['nama_siswa'] ?> | <?= $siswa['nama_kelas'] ?> <?= $siswa['jurusan'] ?></option>
@@ -74,6 +74,14 @@ if (isset($_POST['simpan'])) {
                                 <?php endforeach ?>
                             </select>
                         </div>
+
+                        <!-- <div class="mb-3">
+                            <label for="spp" class="form-label">SPP</label>
+                            <select id="id" class="form-select" name="state">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div> -->
 
                         <div class="mb-3">
                             <label for="spp" class="form-label">SPP</label>
@@ -97,3 +105,8 @@ if (isset($_POST['simpan'])) {
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#id').select2();
+    });
+</script>

@@ -41,14 +41,6 @@ function hapus_data($table, $condition)
     }
 }
 
-function validate($data)
-{
-    $data = trim($data);
-    $data = stripcslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
 function nama_bulan($bulan)
 {
     switch ($bulan) {
